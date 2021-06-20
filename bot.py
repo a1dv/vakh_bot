@@ -5,6 +5,10 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
 TOKEN = 'YOUR_TOKEN'
+
+bot = telebot.TeleBot(TOKEN)
+
+driver = webdriver.Chrome(executable_path="./chromedriver")
 driver.get('http://www.gatchina.biz/generator')
 
 search_input = driver.find_elements_by_css_selector('input')[0]
